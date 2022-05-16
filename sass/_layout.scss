@@ -2,7 +2,7 @@
 .header {
     background-image: url(../images/mobile/image-hero.jpg);
     background-size: cover;
-    height: 59vh;
+    height: 70vh;
 }
 
 .main {
@@ -14,4 +14,10 @@
 .designs {
     margin-top: 3rem;
     padding-top: 6rem;
+}
+
+.footer {
+    margin-top: 8rem;
+    background-color: black;
+    color: $color-white;
 }
