@@ -1,32 +1,30 @@
-@use '../sass/base' as *;
+@use "../sass/base" as *;
 
-.details{
-
-
-    &__h1{
-        text-transform: uppercase;
-        font-family: $josefin;
-        font-weight: 300;
-        font-size: 2.5rem;
-        letter-spacing: 1.7px;
-    }
-
-    &__para {
-        margin-inline: auto;
-        padding-top: 1.2rem;
-        font-family: $alata;
-        font-weight: 400;
-        font-size: $default;
-        text-align: center;
-        width: 90%;
-    }
-}
-
-.designs__h1 {
+.details {
+  &__h1 {
     text-transform: uppercase;
     font-family: $josefin;
     font-weight: 300;
     font-size: 2.5rem;
+    letter-spacing: 1.7px;
+  }
+
+  &__para {
+    margin-inline: auto;
+    padding-top: 1.2rem;
+    font-family: $alata;
+    font-weight: 400;
+    font-size: $default;
     text-align: center;
-    padding-bottom: 3.2rem;
+    width: 90%;
+  }
+}
+
+.designs__h1 {
+  text-transform: uppercase;
+  font-family: $josefin;
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 3.2rem;
 }
