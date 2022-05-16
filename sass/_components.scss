@@ -1,0 +1,58 @@
+@use '../sass/base' as *;
+.details {
+    width: 90%;
+    margin-inline: auto;
+
+
+    &__text {
+        padding-top: 3rem;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+
+}
+
+.designs {
+    display: flex;
+    flex-direction: column;
+
+    &__btn {
+        margin-top: 2.2rem;
+        order: 6;
+        align-self: center;
+        letter-spacing: 2px;
+        padding: .8rem 2.5rem;
+        background-color: $color-white;
+        text-transform: uppercase;
+        border-radius: 3px;
+
+    }
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    &__photobox {
+        position: relative;
+        
+    }
+
+    &__text{
+        position: absolute;
+        bottom: 3rem;
+        left: 2rem;
+        font-family: $josefin;
+        font-weight: 300;
+        font-size: 2.4rem;
+        color: $color-white;
+        text-transform: uppercase;
+        width: 40%;
+        letter-spacing: 1.3px;
+    }
+
+}
+

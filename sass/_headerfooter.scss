@@ -1,0 +1,111 @@
+@use '../sass/base' as *;
+
+.header {
+    &__logo {
+        transform: translateX(1.2rem) translateY(4rem);
+        display: flex;
+        justify-content: space-between;
+
+        &__img {
+            width: 18.4rem;
+        }
+
+        &__bar {
+            margin-right: 3.3rem;
+            border: none;
+            border-radius: 0;
+
+            background-color: $color-white;
+            height: 2.5px;
+            width: 3.5rem;
+            margin-top: 1rem;
+
+
+            &::before, 
+            &::after {
+                content: '';
+                background-color:$color-white;
+                height: 2.5px;
+                width: 3.5rem;
+                display: block;
+            }
+
+            &::before {
+                transform: translateY(-.8rem);
+            }
+            &::after {
+                transform: translateY(.8rem);
+            }
+        }
+    }
+
+    &__nav {
+        display: none;
+    }
+
+    &__immersive-experience {
+        border: 2px solid $color-white;
+        padding: 2.3rem 2.5rem;
+        margin: 0 1.2rem;
+        text-align: left;
+        transform: translateY(14rem);
+
+        &__text {
+            font-family: $josefin;
+            font-weight: 300;
+            color: $color-white;
+            font-size: 4.3rem;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.footer {
+
+
+    &__logo {
+        margin-top: 2rem;
+        padding: 3rem;
+        width: 20rem;
+        margin-inline: auto;
+    }
+
+    &__list {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+
+        &--item{
+            font-family: $josefin;
+            font-size: $default;
+        }
+    }
+
+    &__socials {
+        padding-top: 4.2rem;
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+
+        &__svg {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+}
+
+.attribution {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.3rem;
+
+    & > a {
+        color: $color-gray;
+    }
+
+    
+}

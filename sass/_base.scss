@@ -1,0 +1,36 @@
+// color variable
+$color-white : hsl(0, 0%, 100%);
+$color-black:  hsl(0, 0%, 0%);
+$color-gray: hsl(0, 0%, 55%);
+$color-dark-gray : hsl(0, 0%, 41%);
+
+//text-variable
+$default: 1.5rem;
+
+//fonts
+$josefin : 'Josefin Sans',sans-serif;
+$alata: 'Alata',sans-serif;
+
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: black;
+}
