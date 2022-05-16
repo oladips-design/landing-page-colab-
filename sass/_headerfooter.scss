@@ -64,4 +64,48 @@
 
 .footer {
 
+
+    &__logo {
+        margin-top: 2rem;
+        padding: 3rem;
+        width: 20rem;
+        margin-inline: auto;
+    }
+
+    &__list {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+
+        &--item{
+            font-family: $josefin;
+            font-size: $default;
+        }
+    }
+
+    &__socials {
+        padding-top: 4.2rem;
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+
+        &__svg {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
+    }
+}
+
+.attribution {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.3rem;
+
+    & > a {
+        color: $color-gray;
+    }
+
+    
 }
