@@ -3,9 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/main.css" />
     <!-- displays site properly based on user's device -->
-
+    <script src="script.js" defer></script>
     <link
       rel="icon"
       type="image/png"
@@ -13,40 +19,30 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Loopstudios landing page</title>
-
-    <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
-    <style>
-      img {
-        width: 100%;
-        height: 100%;
-      }
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body class="container">
-    <header class="header">
-      <div class="header_logo">
-        <img src="./images/logo.svg" class="svg" alt="logo-svg" />
-      </div>
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-link">About</li>
-          <li class="header__nav-link">Careers</li>
-          <li class="header__nav-link">Events</li>
-          <li class="header__nav-link">Products</li>
-          <li class="header__nav-link">Support</li>
-        </ul>
-      </nav>
-      <div class="header_immersive-experience">
-        <h1 class="header__h1">Immersive experiences that deliver</h1>
+    <header>
+      <div class="header">
+        <div class="header__logo">
+          <img src="./images/logo.svg" class="header__logo__img" alt="logo-svg" />
+          <img src="./images/icon-hamburger.svg" class="header__icon-hamburger" alt="icon-hamburger" />
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-link">About</li>
+              <li class="header__nav-link">Careers</li>
+              <li class="header__nav-link">Events</li>
+              <li class="header__nav-link">Products</li>
+              <li class="header__nav-link">Support</li>
+            </ul>
+            <img src="./images/icon-close.svg" class="header__icon-closing" alt="closing-svg">
+          </nav>
+        </div>
+        <div class="header__immersive-experience">
+          <h1>Immersive experiences that deliver</h1>
+        </div>
       </div>
     </header>
+
     <main class="main">
       <section class="details">
         <div class="details__photo">
@@ -66,56 +62,61 @@
           </p>
         </div>
       </section>
+
       <section class="designs">
         <h1 class="designs__h1">Our creations</h1>
-        <h3 class="designs__h3">See all</h3>
+        <button class="designs__btn">See all</button>
         <div class="cards">
-          <div class="card__deep-earth">
+          <div class="cards__photobox--1 cards__photobox">
             <img
               src="./images/mobile/image-deep-earth.jpg"
               alt="image-deep-earth"
+              class="cards__photo--1 cards__photo"
             />
-            <h2>Deep earth</h2>
+            <h2 class="cards__text cards__text--1">Deep earth</h2>
           </div>
-          <div class="night-arcade">
+          <div class="cards__photobox">
             <img
               src="./images/mobile/image-night-arcade.jpg"
               alt="image-night-arcade"
             />
-            <h2>Night arcade</h2>
+            <h2 class="cards__text">Night arcade</h2>
           </div>
-          <div class="soccer-team">
+          <div class="cards__photobox">
             <img
               src="./images/mobile/image-soccer-team.jpg"
               alt="image-soccer-team"
             />
-            <h2>Soccer team VR</h2>
+            <h2 class="cards__text" class="cards__text">Soccer team VR</h2>
           </div>
-          <div class="griddy">
+          <div class="cards__photobox">
             <img src="./images/mobile/image-grid.jpg" alt="image-grid" />
-            <h2>The grid</h2>
+            <h2 class="cards__text">
+              The <br />
+              grid
+            </h2>
           </div>
-          <div class="from-above">
+          <div class="cards__photobox">
             <img
               src="./images/mobile/image-from-above.jpg"
               alt="image-from-above"
             />
-            <h2>From up above VR</h2>
+            <h2 class="cards__text">From up above VR</h2>
           </div>
-          <div class="pocket-borealis">
+          <div class="cards__photobox">
             <img src="./images/mobile/image-pocket-borealis.jpg" alt="" />
-            <h2>Pocket borealis</h2>
+            <h2 class="cards__text">Pocket borealis</h2>
           </div>
-          <div class="the-curiosity">
+          <div class="cards__photobox">
             <img
               src="./images/mobile/image-curiosity.jpg"
               alt="image-curiosity"
             />
-            <h2>The curiosity</h2>
+            <h2 class="cards__text">The curiosity</h2>
           </div>
-          <div class="fisheye">
+          <div class="cards__photobox">
             <img src="./images/mobile/image-fisheye.jpg" alt="image-fisheye" />
-            <h2>Make it fisheye</h2>
+            <h2 class="cards__text">Make it fisheye</h2>
           </div>
         </div>
       </section>
@@ -125,25 +126,44 @@
       <div class="footer__logo">
         <img src="./images/logo.svg" alt="logo" />
       </div>
-      <ul>
-        <li>About</li>
-        <li>Careers</li>
-        <li>Events</li>
-        <li>Products</li>
-        <li>Support</li>
+
+      <ul class="footer__list">
+        <li class="footer__list--item">About</li>
+        <li class="footer__list--item">Careers</li>
+        <li class="footer__list--item">Events</li>
+        <li class="footer__list--item">Products</li>
+        <li class="footer__list--item">Support</li>
       </ul>
-      <div class="socials">
-        <img src="./images/icon-facebook.svg" alt="icon-facebook" />
-        <img src="./images/icon-twitter.svg" alt="icon-twitter" />
-        <img src="./images/icon-pinterest.svg" alt="icon-pinterest" />
-        <img src="./images/icon-instagram.svg" alt="icon-instagram" />
+
+      <div class="footer__socials">
+        <img
+          src="./images/icon-facebook.svg"
+          alt="icon-facebook"
+          class="footer__socials__svg social__svg--1"
+        />
+        <img
+          src="./images/icon-twitter.svg"
+          alt="icon-twitter"
+          class="footer__socials__svg social__svg--2"
+        />
+        <img
+          src="./images/icon-pinterest.svg"
+          alt="icon-pinterest"
+          class="footer__socials__svg social__svg--3"
+        />
+        <img
+          src="./images/icon-instagram.svg"
+          alt="icon-instagram"
+          class="footer__socials__svg social__svg--4"
+        />
       </div>
+
       <div class="attribution">
         <p>© 2021 Loopstudios. All rights reserved.</p>
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+          >Frontend Mentor </a
+        >. Coded by <a href="#">Oladips led by Eniolayo</a>.
       </div>
     </footer>
   </body>

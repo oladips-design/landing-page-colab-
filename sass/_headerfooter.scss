@@ -1,0 +1,161 @@
+@use "../sass/base" as *;
+
+.header {
+  height: 100%;
+  width: $container;
+  margin-inline: auto;
+  padding-block-start: 4rem;
+  &__icon-hamburger {
+    width: 2.3rem;
+    cursor: pointer;
+  }
+  &__icon-closing {
+    width: 2.3rem;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    height: 2.5rem;
+    margin-inline-end: 2rem;
+  }
+  @media (min-width: 700px) {
+    &__icon-hamburger {
+      display: none;
+    }
+    &__icon-closing {
+      display: none;
+    }
+  }
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__img {
+      width: 14rem;
+      z-index: 2;
+    }
+  }
+  &__nav {
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0);
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    inset: auto 0 auto 50rem;
+
+    &-list {
+      margin-block-start: 31rem;
+      font-size: 2rem;
+      padding: 1.5rem;
+      font-family: $josefin;
+      font-weight: 200;
+      text-transform: uppercase;
+      li {
+        cursor: pointer;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 700px) {
+    &__nav {
+      position: relative;
+      background: transparent;
+      inset: auto;
+      color: $color-white;
+      width: fit-content;
+    }
+    &__nav-list {
+      margin-block-start: 0;
+      text-transform: capitalize;
+      padding: 0;
+      font-size: 1.2rem;
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  &__immersive-experience {
+    border: 2px solid $color-white;
+    padding: 1.1rem;
+    text-align: left;
+    font-family: $josefin;
+    font-weight: 300;
+    margin-block-start: 8rem;
+    color: $color-white;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    width: min(90%, 26.5rem);
+    line-height: 1.2;
+  }
+}
+
+.footer {
+  &__logo {
+    margin-top: 2rem;
+    padding: 3rem;
+    width: 20rem;
+    margin-inline: auto;
+  }
+
+  &__list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &--item {
+      font-family: $josefin;
+      font-size: $default;
+    }
+  }
+
+  &__socials {
+    padding-top: 4.2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+
+    &__svg {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+  }
+}
+.toggle--class {
+  // js toggle class
+  animation: navigationBar 1s ease;
+  inset: auto 0 auto auto;
+}
+@keyframes navigationBar {
+  0% {
+    inset: auto 0 auto 50rem;
+  }
+  20% {
+    inset: auto 0 auto 8rem;
+  }
+  30% {
+    inset: auto 0 auto 5rem;
+  }
+  80% {
+    inset: auto 0 auto 0.5rem;
+  }
+  90% {
+    inset: auto 0 auto 0.1rem;
+  }
+  100% {
+    inset: auto 0 auto auto;
+  }
+}
+.attribution {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 1.3rem;
+
+  & > a {
+    color: $color-gray;
+  }
+}
