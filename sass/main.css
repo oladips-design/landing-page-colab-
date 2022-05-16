@@ -43,6 +43,7 @@ img {
   margin-top: 8rem;
   background-color: black;
   color: hsl(0deg, 0%, 100%);
+  padding-bottom: 3.4rem;
 }
 
 .details__h1 {
@@ -118,6 +119,42 @@ img {
   font-size: 4.3rem;
   letter-spacing: 1.3px;
   text-transform: uppercase;
+}
+
+.footer__logo {
+  margin-top: 2rem;
+  padding: 3rem;
+  width: 20rem;
+  margin-inline: auto;
+}
+.footer__list {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer__list--item {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+}
+.footer__socials {
+  padding-top: 4.2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.footer__socials__svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.attribution {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 1.3rem;
+}
+.attribution > a {
+  color: hsl(0deg, 0%, 55%);
 }
 
 .details {
