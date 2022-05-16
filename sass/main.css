@@ -1,1 +1,19 @@
-/*# sourceMappingURL=main.css.map */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.header {
+  background-color: black;
+}/*# sourceMappingURL=main.css.map */
