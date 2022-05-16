@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/main.css" />
     <!-- displays site properly based on user's device -->
-
+    <script src="script.js" defer></script>
     <link
       rel="icon"
       type="image/png"
@@ -18,27 +21,26 @@
     <title>Frontend Mentor | Loopstudios landing page</title>
   </head>
   <body class="container">
-    <header class="header">
-      <div class="header__logo">
-        <img src="./images/logo.svg" class="header__logo__img" alt="logo-svg" />
-
-        <button class="header__logo__bar"></button>
+    <header>
+      <div class="header">
+        <div class="header__logo">
+          <img src="./images/logo.svg" class="header__logo__img" alt="logo-svg" />
+          <img src="./images/icon-hamburger.svg" class="header__icon-hamburger" alt="icon-hamburger" />
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-link">About</li>
+              <li class="header__nav-link">Careers</li>
+              <li class="header__nav-link">Events</li>
+              <li class="header__nav-link">Products</li>
+              <li class="header__nav-link">Support</li>
+            </ul>
+            <img src="./images/icon-close.svg" class="header__icon-closing" alt="closing-svg">
+          </nav>
+        </div>
+        <div class="header__immersive-experience">
+          <h1>Immersive experiences that deliver</h1>
+        </div>
       </div>
-
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-link">About</li>
-          <li class="header__nav-link">Careers</li>
-          <li class="header__nav-link">Events</li>
-          <li class="header__nav-link">Products</li>
-          <li class="header__nav-link">Support</li>
-        </ul>
-      </nav>
-
-      <div class="header__immersive-experience">
-        <h1 class="header__immersive-experience__text">Immersive experiences that deliver</h1>
-      </div>
-
     </header>
 
     <main class="main">
@@ -89,7 +91,10 @@
           </div>
           <div class="cards__photobox">
             <img src="./images/mobile/image-grid.jpg" alt="image-grid" />
-            <h2 class="cards__text">The grid</h2>
+            <h2 class="cards__text">
+              The <br />
+              grid
+            </h2>
           </div>
           <div class="cards__photobox">
             <img
@@ -115,7 +120,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="footer">
@@ -132,16 +136,34 @@
       </ul>
 
       <div class="footer__socials">
-        <img src="./images/icon-facebook.svg" alt="icon-facebook" class="footer__socials__svg social__svg--1" />
-        <img src="./images/icon-twitter.svg" alt="icon-twitter" class="footer__socials__svg social__svg--2" />
-        <img src="./images/icon-pinterest.svg" alt="icon-pinterest" class="footer__socials__svg social__svg--3" />
-        <img src="./images/icon-instagram.svg" alt="icon-instagram" class="footer__socials__svg social__svg--4" />
+        <img
+          src="./images/icon-facebook.svg"
+          alt="icon-facebook"
+          class="footer__socials__svg social__svg--1"
+        />
+        <img
+          src="./images/icon-twitter.svg"
+          alt="icon-twitter"
+          class="footer__socials__svg social__svg--2"
+        />
+        <img
+          src="./images/icon-pinterest.svg"
+          alt="icon-pinterest"
+          class="footer__socials__svg social__svg--3"
+        />
+        <img
+          src="./images/icon-instagram.svg"
+          alt="icon-instagram"
+          class="footer__socials__svg social__svg--4"
+        />
       </div>
 
       <div class="attribution">
         <p>© 2021 Loopstudios. All rights reserved.</p>
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor </a>. Coded by <a href="#">Oladips led by Eniolayo</a>.
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor </a
+        >. Coded by <a href="#">Oladips led by Eniolayo</a>.
       </div>
     </footer>
   </body>
