@@ -1,12 +1,82 @@
-*, *::after, *::before {
-  margin: 0;
-  padding: 0;
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
 html {
-  box-sizing: inherit;
-  font-size: 62.5%;
+  font-size: 15px;
 }
 
 img {
@@ -14,21 +84,21 @@ img {
   height: 100%;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
+ul {
+  list-style: none;
 }
 
-.header {
-  background-color: black;
-}
-
-.header {
+header {
   background-image: url(../images/mobile/image-hero.jpg);
-  background-size: cover;
-  height: 70vh;
+  height: 50vh;
 }
 
+@media (min-width: 700px) {
+  header {
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-size: cover;
+  }
+}
 .main {
   margin-top: 3.6rem;
   padding-top: 6rem;
@@ -42,13 +112,13 @@ img {
 .footer {
   margin-top: 8rem;
   background-color: black;
-  color: hsl(0deg, 0%, 100%);
+  color: hwb(0 100% 0%);
   padding-bottom: 3.4rem;
 }
 
 .details__h1 {
   text-transform: uppercase;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Alata", sans-serif;
   font-weight: 300;
   font-size: 2.5rem;
   letter-spacing: 1.7px;
@@ -65,60 +135,108 @@ img {
 
 .designs__h1 {
   text-transform: uppercase;
-  font-family: "Alata", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   font-size: 2.5rem;
   text-align: center;
   padding-bottom: 3.2rem;
 }
 
+.header {
+  height: 100%;
+  width: min(90%, 70rem);
+  margin-inline: auto;
+  -webkit-padding-before: 4rem;
+          padding-block-start: 4rem;
+}
+.header__icon-hamburger {
+  width: 2.3rem;
+  cursor: pointer;
+}
+.header__icon-closing {
+  width: 2.3rem;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  height: 2.5rem;
+  -webkit-margin-end: 2rem;
+          margin-inline-end: 2rem;
+}
+@media (min-width: 700px) {
+  .header__icon-hamburger {
+    display: none;
+  }
+  .header__icon-closing {
+    display: none;
+  }
+}
 .header__logo {
-  transform: translateX(1.2rem) translateY(4rem);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .header__logo__img {
-  width: 18.4rem;
-}
-.header__logo__bar {
-  margin-right: 3.3rem;
-  border: none;
-  border-radius: 0;
-  background-color: hsl(0deg, 0%, 100%);
-  height: 2.5px;
-  width: 3.5rem;
-  margin-top: 1rem;
-}
-.header__logo__bar::before, .header__logo__bar::after {
-  content: "";
-  background-color: hsl(0deg, 0%, 100%);
-  height: 2.5px;
-  width: 3.5rem;
-  display: block;
-}
-.header__logo__bar::before {
-  transform: translateY(-0.8rem);
-}
-.header__logo__bar::after {
-  transform: translateY(0.8rem);
+  width: 14rem;
+  z-index: 2;
 }
 .header__nav {
-  display: none;
+  position: absolute;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  inset: auto 0 auto 50rem;
+}
+.header__nav-list {
+  -webkit-margin-before: 31rem;
+          margin-block-start: 31rem;
+  font-size: 2rem;
+  padding: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.header__nav-list li {
+  cursor: pointer;
+}
+.header__nav-list li:hover {
+  opacity: 0.6;
+}
+@media (min-width: 700px) {
+  .header__nav {
+    position: relative;
+    background: transparent;
+    inset: auto;
+    color: hwb(0 100% 0%);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .header__nav-list {
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+    text-transform: capitalize;
+    padding: 0;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 1rem;
+  }
 }
 .header__immersive-experience {
-  border: 2px solid hsl(0deg, 0%, 100%);
-  padding: 2.3rem 2.5rem;
-  margin: 0 1.2rem;
+  border: 2px solid hwb(0 100% 0%);
+  padding: 1.1rem;
   text-align: left;
-  transform: translateY(14rem);
-}
-.header__immersive-experience__text {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
-  color: hsl(0deg, 0%, 100%);
-  font-size: 4.3rem;
-  letter-spacing: 1.3px;
+  -webkit-margin-before: 8rem;
+          margin-block-start: 8rem;
+  color: hwb(0 100% 0%);
+  font-size: 1.4rem;
   text-transform: uppercase;
+  width: min(90%, 26.5rem);
+  line-height: 1.2;
 }
 
 .footer__logo {
@@ -148,13 +266,60 @@ img {
   height: 2.2rem;
 }
 
+.toggle--class {
+  -webkit-animation: navigationBar 1s ease;
+          animation: navigationBar 1s ease;
+  inset: auto 0 auto auto;
+}
+
+@-webkit-keyframes navigationBar {
+  0% {
+    inset: auto 0 auto 50rem;
+  }
+  20% {
+    inset: auto 0 auto 8rem;
+  }
+  30% {
+    inset: auto 0 auto 5rem;
+  }
+  80% {
+    inset: auto 0 auto 0.5rem;
+  }
+  90% {
+    inset: auto 0 auto 0.1rem;
+  }
+  100% {
+    inset: auto 0 auto auto;
+  }
+}
+
+@keyframes navigationBar {
+  0% {
+    inset: auto 0 auto 50rem;
+  }
+  20% {
+    inset: auto 0 auto 8rem;
+  }
+  30% {
+    inset: auto 0 auto 5rem;
+  }
+  80% {
+    inset: auto 0 auto 0.5rem;
+  }
+  90% {
+    inset: auto 0 auto 0.1rem;
+  }
+  100% {
+    inset: auto 0 auto auto;
+  }
+}
 .attribution {
   text-align: center;
   padding-top: 2rem;
   font-size: 1.3rem;
 }
 .attribution > a {
-  color: hsl(0deg, 0%, 55%);
+  color: hwb(0 55% 45%);
 }
 
 .details {
@@ -178,7 +343,7 @@ img {
   align-self: center;
   letter-spacing: 2px;
   padding: 0.8rem 2.5rem;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hwb(0 100% 0%);
   text-transform: uppercase;
   border-radius: 3px;
 }
@@ -187,19 +352,20 @@ img {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  width: 90%;
+  margin-inline: auto;
 }
 .cards__photobox {
   position: relative;
 }
 .cards__text {
   position: absolute;
-  bottom: 3rem;
-  left: 2rem;
+  inset: auto 1rem 0;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
-  font-size: 2.4rem;
-  color: hsl(0deg, 0%, 100%);
+  font-size: 2rem;
+  color: hwb(0 100% 0%);
   text-transform: uppercase;
-  width: 40%;
-  letter-spacing: 1.3px;
+  width: 43%;
+  line-height: 1.2;
 }/*# sourceMappingURL=main.css.map */
