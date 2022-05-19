@@ -91,7 +91,7 @@ ul {
 
 header {
   background-image: url(../images/mobile/image-hero.jpg);
-  height: 75vh;
+  height: 65vh;
 }
 
 @media (min-width: 700px) {
@@ -202,7 +202,7 @@ header {
 }
 .header__logo__img {
   width: 14rem;
-  z-index: 2;
+  z-index: 6;
 }
 .header__nav {
   position: absolute;
@@ -214,15 +214,17 @@ header {
   justify-content: space-between;
   align-items: center;
   left: 50rem;
+  z-index: 6;
 }
 .header__nav-list {
-  -webkit-margin-before: -4rem;
-          margin-block-start: -4rem;
+  -webkit-margin-before: 7rem;
+          margin-block-start: 7rem;
   font-size: 2rem;
   padding: 2.1rem;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 200;
   text-transform: uppercase;
+  align-self: start;
 }
 .header__nav-list li {
   cursor: pointer;
@@ -256,8 +258,8 @@ header {
   text-align: left;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
-  -webkit-margin-before: 10rem;
-          margin-block-start: 10rem;
+  -webkit-margin-before: 6.5rem;
+          margin-block-start: 6.5rem;
   color: #ffffff;
   font-size: 1.4rem;
   text-transform: uppercase;

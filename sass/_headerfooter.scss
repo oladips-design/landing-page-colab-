@@ -34,7 +34,7 @@
 
     &__img {
       width: 14rem;
-      z-index: 2;
+      z-index: 6;
     }
   }
   &__nav {
@@ -47,13 +47,15 @@
     justify-content: space-between;
     align-items: center;
     left: 50rem;
+    z-index: 6;
     &-list {
-      margin-block-start: -4rem;
+      margin-block-start: 7rem;
       font-size: 2rem;
       padding: 2.1rem;
       font-family: "Josefin Sans", sans-serif;
       font-weight: 200;
       text-transform: uppercase;
+      align-self: start;
       li {
         cursor: pointer;
         &:hover {
@@ -86,7 +88,7 @@
     text-align: left;
     font-family: $josefin;
     font-weight: 300;
-    margin-block-start: 10rem;
+    margin-block-start: 6.5rem;
     color: $color-white;
     font-size: 1.4rem;
     text-transform: uppercase;
