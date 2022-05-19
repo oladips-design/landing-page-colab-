@@ -1,8 +1,8 @@
 // color variable
-$color-white: hwb(0 100% 0%);
-$color-black: hwb(0 0% 100%);
-$color-gray: hwb(0 55% 45%);
-$color-dark-gray: hwb(0 41% 59%);
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray: #8c8c8c;
+$color-dark-gray: #696969;
 $container: min(90%, 70rem);
 
 //text-variable
@@ -32,6 +32,7 @@ $alata: "Alata", sans-serif;
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 /*
   Typographic tweaks!
@@ -82,8 +83,6 @@ h6 {
   isolation: isolate;
 }
 html {
-  // font-size: 62.5%;
-  // Not a good practice changing the root font size unless a base root font size was provided which is 15px
   font-size: 15px;
 }
 
