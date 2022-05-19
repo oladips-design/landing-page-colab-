@@ -42,16 +42,16 @@
     width: 100%;
     background: rgba(0, 0, 0);
     height: 100%;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     left: 50rem;
     &-list {
+      color: white;
       margin-block-start: -4rem;
       font-size: 2rem;
       padding: 2.1rem;
-      font-family: "Josefin Sans", sans-serif;
+      font-family: $alata;
       font-weight: 200;
       text-transform: uppercase;
       li {
@@ -78,6 +78,7 @@
       font-size: 1.2rem;
       display: flex;
       gap: 1rem;
+
     }
   }
   &__immersive-experience {

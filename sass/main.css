@@ -187,18 +187,18 @@ header {
   width: 100%;
   background: rgb(0, 0, 0);
   height: 100%;
-  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   left: 50rem;
 }
 .header__nav-list {
+  color: white;
   -webkit-margin-before: -4rem;
           margin-block-start: -4rem;
   font-size: 2rem;
   padding: 2.1rem;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Alata", sans-serif;
   font-weight: 200;
   text-transform: uppercase;
 }
