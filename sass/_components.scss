@@ -1,41 +1,75 @@
 @use "../sass/base" as *;
+
 .details {
-  width: 90%;
+  width: $container;
   margin-inline: auto;
+  position: relative;
 
   &__text {
-    padding-top: 3rem;
-    width: 80%;
+    padding: 3rem;
+    width: min(90%, 32.5rem);
     text-align: center;
     margin: 0 auto;
+    @media (min-width: 800px) {
+      text-align: left;
+      position: absolute;
+      left: 44%;
+      top: 40%;
+      background-color: white;
+      width: 60%;
+      max-width: 530px;
+    }
   }
 }
-
 .designs {
-  display: flex;
-  flex-direction: column;
-
+  display: grid;
+  grid-template-columns: auto auto;
+  width: $container;
+  margin-inline: auto;
   &__btn {
-    margin-top: 2.2rem;
-    order: 6;
-    align-self: center;
+    justify-self: end;
     letter-spacing: 2px;
-    padding: 0.8rem 2.5rem;
+    padding: 0.8rem 1.2rem;
     background-color: $color-white;
     text-transform: uppercase;
     border-radius: 3px;
+    border: 1px solid $color-black;
+    transition: background 300ms ease;
+    cursor: pointer;
+    &:hover {
+      background: $color-black;
+      color: $color-white;
+    }
+    @media (max-width: 700px) {
+      order: 3;
+      justify-self: center;
+      grid-column: 1/-1;
+    }
   }
 }
 
 .cards {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  width:90%;
-  margin-inline:auto;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-block: 3rem;
+  margin-inline: auto;
 
   &__photobox {
     position: relative;
+    cursor: pointer;
+    transition: transform 300ms ease-in;
+    filter: brightness(90%);
+    z-index: 1;
+    source {
+      object-fit: cover;
+    }
+    &:hover {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
   }
 
   &__text {
@@ -46,7 +80,6 @@
     font-size: 2rem;
     color: $color-white;
     text-transform: uppercase;
-    width: 43%;
     line-height: 1.2;
   }
 }
