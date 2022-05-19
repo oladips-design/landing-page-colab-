@@ -24,8 +24,16 @@
     <header>
       <div class="header">
         <div class="header__logo">
-          <img src="./images/logo.svg" class="header__logo__img" alt="logo-svg" />
-          <img src="./images/icon-hamburger.svg" class="header__icon-hamburger" alt="icon-hamburger" />
+          <img
+            src="./images/logo.svg"
+            class="header__logo__img"
+            alt="logo-svg"
+          />
+          <img
+            src="./images/icon-hamburger.svg"
+            class="header__icon-hamburger"
+            alt="icon-hamburger"
+          />
           <nav class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-link">About</li>
@@ -34,7 +42,11 @@
               <li class="header__nav-link">Products</li>
               <li class="header__nav-link">Support</li>
             </ul>
-            <img src="./images/icon-close.svg" class="header__icon-closing" alt="closing-svg">
+            <img
+              src="./images/icon-close.svg"
+              class="header__icon-closing"
+              alt="closing-svg"
+            />
           </nav>
         </div>
         <div class="header__immersive-experience">
@@ -44,7 +56,6 @@
     </header>
 
     <main class="main">
-      
       <section class="details">
         <div class="details__photo">
           <img
@@ -67,58 +78,97 @@
       <section class="designs">
         <h1 class="designs__h1">Our creations</h1>
         <button class="designs__btn">See all</button>
+
         <div class="cards">
-          <div class="cards__photobox--1 cards__photobox">
+          <picture class="cards__photobox--1 cards__photobox">
+            <source
+              srcset="./images/desktop/image-deep-earth.jpg"
+              media="(min-width: 600px)"
+            />
             <img
               src="./images/mobile/image-deep-earth.jpg"
               alt="image-deep-earth"
               class="cards__photo--1 cards__photo"
             />
-            <h2 class="cards__text cards__text--1">Deep earth</h2>
-          </div>
-          <div class="cards__photobox">
+            <h2 class="cards__text cards__text--1">
+              Deep <br />
+              earth
+            </h2>
+          </picture>
+          <picture class="cards__photobox">
+            <source
+              srcset="./images/desktop/image-night-arcade.jpg"
+              media="(min-width: 600px)"
+            />
             <img
               src="./images/mobile/image-night-arcade.jpg"
               alt="image-night-arcade"
             />
-            <h2 class="cards__text">Night arcade</h2>
-          </div>
-          <div class="cards__photobox">
+            <h2 class="cards__text">
+              Night<br />
+              arcade
+            </h2>
+          </picture>
+          <picture class="cards__photobox">
+            <source
+              srcset="./images/desktop/image-soccer-team.jpg"
+              media="(min-width: 600px)"
+            />
             <img
               src="./images/mobile/image-soccer-team.jpg"
               alt="image-soccer-team"
             />
-            <h2 class="cards__text" class="cards__text">Soccer team VR</h2>
-          </div>
-          <div class="cards__photobox">
+            <h2 class="cards__text">Soccer <br /> team VR</h2>
+          </picture>
+          <picture class="cards__photobox">
+            <source
+              srcset="./images/desktop/image-grid.jpg"
+              media="(min-width: 600px)"
+            />
             <img src="./images/mobile/image-grid.jpg" alt="image-grid" />
             <h2 class="cards__text">
               The <br />
               grid
             </h2>
-          </div>
-          <div class="cards__photobox">
+          </picture>
+          <picture class="cards__photobox">
+            <source
+              srcset="./images/desktop/image-from-above.jpg"
+              media="(min-width: 600px)"
+            />
             <img
               src="./images/mobile/image-from-above.jpg"
               alt="image-from-above"
             />
-            <h2 class="cards__text">From up above VR</h2>
-          </div>
-          <div class="cards__photobox">
+            <h2 class="cards__text">From up <br /> above VR</h2>
+          </picture>
+          <picture class="cards__photobox">
+            <source
+              srcset="./images/desktop/image-pocket-borealis.jpg"
+              media="(min-width: 600px)"
+            />
             <img src="./images/mobile/image-pocket-borealis.jpg" alt="" />
-            <h2 class="cards__text">Pocket borealis</h2>
-          </div>
-          <div class="cards__photobox">
+            <h2 class="cards__text">Pocket <br /> borealis</h2>
+          </picture>
+          <picture class="cards__photobox">
+            <source
+              srcset="./images/desktop/image-curiosity.jpg"
+              media="(min-width: 600px)"
+            />
             <img
               src="./images/mobile/image-curiosity.jpg"
               alt="image-curiosity"
             />
-            <h2 class="cards__text">The curiosity</h2>
-          </div>
-          <div class="cards__photobox">
+            <h2 class="cards__text">The <br /> curiosity</h2>
+          </picture>
+          <picture class="cards__photobox">
+            <source
+              srcset="./images/desktop/image-fisheye.jpg"
+              media="(min-width: 600px)"
+            />
             <img src="./images/mobile/image-fisheye.jpg" alt="image-fisheye" />
-            <h2 class="cards__text">Make it fisheye</h2>
-          </div>
+            <h2 class="cards__text">Make it <br /> fisheye</h2>
+          </picture>
         </div>
       </section>
     </main>

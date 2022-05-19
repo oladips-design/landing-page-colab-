@@ -106,8 +106,8 @@ header {
 }
 
 .designs {
-  margin-top: 3rem;
-  padding-top: 6rem;
+  -webkit-margin-before: 11rem;
+          margin-block-start: 11rem;
 }
 
 .footer {
@@ -162,7 +162,13 @@ header {
   font-weight: 300;
   font-size: 2.5rem;
   text-align: center;
-  padding-bottom: 3.2rem;
+  justify-self: start;
+}
+@media (max-width: 700px) {
+  .designs__h1 {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
 }
 
 .header {
@@ -393,29 +399,57 @@ header {
 }
 
 .designs {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: min(90%, 70rem);
+  margin-inline: auto;
 }
 .designs__btn {
-  margin-top: 2.2rem;
-  order: 6;
-  align-self: center;
+  justify-self: end;
   letter-spacing: 2px;
-  padding: 0.8rem 2.5rem;
+  padding: 0.8rem 1.2rem;
   background-color: #ffffff;
   text-transform: uppercase;
   border-radius: 3px;
+  border: 1px solid #000000;
+  transition: background 300ms ease;
+  cursor: pointer;
+}
+.designs__btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+@media (max-width: 700px) {
+  .designs__btn {
+    order: 3;
+    justify-self: center;
+    grid-column: 1/-1;
+  }
 }
 
 .cards {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  width: 90%;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-block: 3rem;
   margin-inline: auto;
 }
 .cards__photobox {
   position: relative;
+  cursor: pointer;
+  transition: transform 300ms ease-in;
+  filter: brightness(90%);
+  z-index: 1;
+}
+.cards__photobox source {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cards__photobox:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
 }
 .cards__text {
   position: absolute;
@@ -425,6 +459,5 @@ header {
   font-size: 2rem;
   color: #ffffff;
   text-transform: uppercase;
-  width: 43%;
   line-height: 1.2;
 }/*# sourceMappingURL=main.css.map */
