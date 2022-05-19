@@ -1,6 +1,11 @@
 @use "../sass/base" as *;
 
 .details {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
   &__h1 {
     text-transform: uppercase;
     font-family: $josefin;
@@ -11,12 +16,21 @@
 
   &__para {
     margin-inline: auto;
-    padding-top: 1.2rem;
     font-family: $alata;
     font-weight: 400;
     font-size: $default;
-    text-align: center;
-    width: 90%;
+    color: $color-gray;
+    @media (min-width: 800px) {
+      font-size: 1rem;
+    }
+  }
+  &__photo {
+    width: 70%;
+    max-width: 600px;
+    margin-inline: auto;
+    @media (min-width: 800px) {
+      margin-inline: 0 auto;
+    }
   }
 }
 

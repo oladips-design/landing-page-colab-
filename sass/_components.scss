@@ -1,13 +1,23 @@
 @use "../sass/base" as *;
 .details {
-  width: 90%;
+  width: $container;
   margin-inline: auto;
+  position: relative;
 
   &__text {
-    padding-top: 3rem;
-    width: 80%;
+    padding: 3rem;
+    width: min(90%, 32.5rem);
     text-align: center;
     margin: 0 auto;
+    @media (min-width: 800px) {
+      text-align: left;
+      position: absolute;
+      left: 44%;
+      top: 40%;
+      background-color: white;
+      width: 60%;
+      max-width: 530px;
+    }
   }
 }
 
@@ -31,8 +41,8 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  width:90%;
-  margin-inline:auto;
+  width: 90%;
+  margin-inline: auto;
 
   &__photobox {
     position: relative;
