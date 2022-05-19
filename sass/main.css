@@ -128,7 +128,7 @@ header {
 }
 .details__h1 {
   text-transform: uppercase;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Alata", sans-serif;
   font-weight: 300;
   font-size: 2.5rem;
   letter-spacing: 1.7px;
@@ -209,29 +209,27 @@ header {
 }
 .header__logo__img {
   width: 14rem;
-  z-index: 6;
+  z-index: 2;
 }
 .header__nav {
   position: absolute;
   width: 100%;
   background: rgb(0, 0, 0);
   height: 100%;
-  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   left: 50rem;
-  z-index: 6;
 }
 .header__nav-list {
-  -webkit-margin-before: 7rem;
-          margin-block-start: 7rem;
+  color: white;
+  -webkit-margin-before: -4rem;
+          margin-block-start: -4rem;
   font-size: 2rem;
   padding: 2.1rem;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Alata", sans-serif;
   font-weight: 200;
   text-transform: uppercase;
-  align-self: start;
 }
 .header__nav-list li {
   cursor: pointer;
@@ -265,8 +263,8 @@ header {
   text-align: left;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
-  -webkit-margin-before: 6.5rem;
-          margin-block-start: 6.5rem;
+  -webkit-margin-before: 6rem;
+          margin-block-start: 6rem;
   color: #ffffff;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -303,6 +301,12 @@ header {
   text-align: center;
   padding-top: 2rem;
   font-size: 1.3rem;
+}
+@media (min-width: 700px) {
+  .attribution {
+    text-align: right;
+    font-size: 1rem;
+  }
 }
 .attribution > a {
   color: #8c8c8c;
