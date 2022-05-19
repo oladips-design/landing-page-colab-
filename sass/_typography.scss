@@ -19,8 +19,9 @@
     font-family: $alata;
     font-weight: 400;
     font-size: $default;
-    color: $color-gray;
+    color: $color-black;
     @media (min-width: 800px) {
+      color: $color-gray;
       font-size: 1rem;
     }
   }
@@ -33,7 +34,6 @@
     }
   }
 }
-
 .designs__h1 {
   text-transform: uppercase;
   font-family: $josefin;
@@ -41,7 +41,7 @@
   font-size: 2.5rem;
   text-align: center;
   justify-self: start;
-  @media (max-width:700px) {
+  @media (max-width: 700px) {
     grid-column: 1/-1;
     justify-self: center;
   }

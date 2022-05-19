@@ -1,4 +1,5 @@
 @use "../sass/base" as *;
+
 .details {
   width: $container;
   margin-inline: auto;
@@ -20,12 +21,11 @@
     }
   }
 }
-
 .designs {
   display: grid;
   grid-template-columns: auto auto;
   width: $container;
-  margin-inline:auto;
+  margin-inline: auto;
   &__btn {
     justify-self: end;
     letter-spacing: 2px;
@@ -36,13 +36,13 @@
     border: 1px solid $color-black;
     transition: background 300ms ease;
     cursor: pointer;
-    &:hover{
+    &:hover {
       background: $color-black;
       color: $color-white;
     }
-    @media (max-width:700px) {
-      order:3;
-      justify-self:center;
+    @media (max-width: 700px) {
+      order: 3;
+      justify-self: center;
       grid-column: 1/-1;
     }
   }
@@ -51,10 +51,10 @@
 .cards {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   width: 100%;
-  margin-block:3rem;
+  margin-block: 3rem;
   margin-inline: auto;
 
   &__photobox {
@@ -63,12 +63,12 @@
     transition: transform 300ms ease-in;
     filter: brightness(90%);
     z-index: 1;
-    source{
+    source {
       object-fit: cover;
     }
-    &:hover{
+    &:hover {
       transform: scale(1.05);
-      opacity: .8;
+      opacity: 0.8;
     }
   }
 
