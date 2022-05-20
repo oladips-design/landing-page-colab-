@@ -234,8 +234,13 @@ header {
 .header__nav-list li {
   cursor: pointer;
 }
-.header__nav-list li:hover {
-  opacity: 0.6;
+.header__nav-link {
+  transition: all 0.8s;
+}
+@media (min-width: 700px) {
+  .header__nav-link:hover {
+    border-bottom: 2px solid white;
+  }
 }
 @media (min-width: 700px) {
   .header__nav {

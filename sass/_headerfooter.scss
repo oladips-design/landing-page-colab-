@@ -57,9 +57,31 @@
       li {
         cursor: pointer;
         &:hover {
-          opacity: 0.6;
+          // opacity: 0.6;
         }
       }
+    }
+
+    &-link {
+      // display: block;
+      transition: all .8s;
+
+      @media (min-width: 700px) {
+
+        &:hover {
+          border-bottom: 2px solid white;
+        }
+
+        // &::after {
+        //   content: '';
+        //   width: 3rem;
+        //   height: .3rem;
+        //   display: block;
+        //   color: white;
+
+        // }
+      }
+
     }
   }
 
