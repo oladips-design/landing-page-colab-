@@ -56,32 +56,23 @@
       text-transform: uppercase;
       li {
         cursor: pointer;
-        &:hover {
-          // opacity: 0.6;
-        }
       }
     }
 
-    &-link {
-      // display: block;
-      transition: all .8s;
+    &-link::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: .2rem;
+      background-color: $color-white;
+      border-radius: 10px;
+      transform: scale(0);
+      
+      transition: transform 300ms ease-in;
+    }
 
-      @media (min-width: 700px) {
-
-        &:hover {
-          border-bottom: 2px solid white;
-        }
-
-        // &::after {
-        //   content: '';
-        //   width: 3rem;
-        //   height: .3rem;
-        //   display: block;
-        //   color: white;
-
-        // }
-      }
-
+    &-link:hover::after {
+      transform: scale(.7);
     }
   }
 
